@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Página de login para hotspot WiFi" />
+    <meta name="author" content="Jotanunes" />
+    <link rel="icon" type="image/svg+xml" href="img/Logo.JOTA.3.svg" />
+    <title>Hotspot Login | Jotanunes</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="bootstrap-5.3.6-dist/bootstrap-5.3.6-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS personalizado -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/carousel.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="navbar navbar-light fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="img/LOGO.png" class="logo-img" alt="Logo Jotanunes" />
+        </a>
+      </div>
+    </header>
+
+    <main class="container main-content">
+      <div class="row g-4">
+        <section class="col-lg-8">
+          <!-- Carrossel com efeito fade -->
+          <div class="carousel-container" id="carousel">
+            <div class="carousel-track">
+              <img
+                src="img/img3.png"
+                alt="Background"
+                class="carousel-slide active"
+              />
+              <img src="img/img2.jpg" alt="Imagem 2" class="carousel-slide" />
+              <img src="img/img1.jpg" alt="Imagem 3" class="carousel-slide" />
+            </div>
+          </div>
+        </section>
+
+        <aside class="col-lg-4">
+          <div class="login-card">
+            <div class="login-header">
+              <div class="red-line"></div>
+              <h2>Bem-Vindo</h2>
+              <p class="lead">
+                Por favor, leia e aceite os termos para se conectar
+              </p>
+            </div>
+
+            <form method="POST" action="?action=login" class="login-form">
+              <div class="terms-box">
+                <ul>
+                  <li>O uso desta rede é monitorado pela Jotanunes.</li>
+                  <li>Todos os acessos são registrados conforme a LGPD.</li>
+                  <li>O tempo de conexão é limitado a 12 horas.</li>
+                  <li>
+                    Ao se conectar, você concorda com os termos de uso da rede.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="form-check mt-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="accept"
+                  value="true"
+                  id="acceptTerms"
+                  required
+                />
+                <label class="form-check-label" for="acceptTerms">
+                  Eu li e aceito os termos acima.
+                </label>
+              </div>
+
+              <div class="d-grid gap-2 mt-4">
+                <button
+                  class="btn btn-primary btn-lg"
+                  type="submit"
+                  name="login"
+                >
+                  Aceitar e Conectar
+                </button>
+              </div>
+
+              <div class="support-info mt-3 text-center">
+                Em caso de dúvidas, entre em contato com
+                <a href="mailto:suporte@jotanunes.com">suporte@jotanunes.com</a>
+              </div>
+            </form>
+
+            <?if_loggedin?>
+            <div class="authenticated-message text-center mt-4">
+              <div class="alert alert-success">
+                <strong>Você já está autenticado.</strong><br />
+                Você poderá acessar
+                <a href="https://www.jotanunes.com.br" target="_blank"
+                  >jotanunes.com.br</a
+                >
+                em:
+                <div class="countdown-wrapper">
+                  <span id="redirect-timer" class="countdown-number">5</span>
+                </div>
+                <a
+                  href="https://www.jotanunes.com.br"
+                  target="_blank"
+                  class="btn btn-sm btn-success mt-3"
+                  id="manual-access"
+                  style="display: none"
+                >
+                  Ir agora
+                </a>
+              </div>
+            </div>
+            <?if_loggedin_end?>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <address class="mb-md-0">
+              <strong>Jotanunes Construtora</strong><br />
+              Av. Dr Roosewelt Dantas Cardoso de Menezes, 770 - Centro, Aracaju
+              - SE, 49010-410<br />
+              <a href="tel:08005585800" class="phone-link">0800 558 5800</a>
+            </address>
+          </div>
+          <div class="col-md-4">
+            <div class="social-icons">
+              <a
+                href="https://www.youtube.com/c/jotanunesconstrutora"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <img src="img/Youtube.png" alt="YouTube" class="social-icon" />
+              </a>
+              <a
+                href="https://www.facebook.com/JotanunesConstrutora/?locale=pt_BR"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <img
+                  src="img/Facebook.png"
+                  alt="Facebook"
+                  class="social-icon"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/jotanunesconstrutora/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img
+                  src="img/Instagram.png"
+                  alt="Instagram"
+                  class="social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="bootstrap-5.3.6-dist/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script personalizado -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
