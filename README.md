@@ -2,8 +2,7 @@ Portal de autenticação personalizado para acesso à rede Wi-Fi da **Jotanunes 
 
 ## 📸 Captura de Tela
 
-![Hotspot Page Screenshot]![image](https://github.com/user-attachments/assets/706052ff-04e9-4ce3-9801-68d6c82d662e)
-)
+![Hotspot Page]![image](https://github.com/user-attachments/assets/706052ff-04e9-4ce3-9801-68d6c82d662e)
 
 ## 🎯 Objetivo
 
