@@ -1,0 +1,158 @@
+/* Variáveis para o modo escuro */
+:root {
+  --dark-bg-color: #121212;
+  --dark-surface-color: #1e1e1e;
+  --dark-text-color: #e0e0e0;
+  --dark-text-secondary: #aaaaaa;
+  --dark-border-color: #333333;
+  --dark-input-bg: #2d2d2d;
+  --dark-hover-color: #333333;
+}
+
+/* Classes para o modo escuro */
+body.dark-mode {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+}
+
+/* Header no modo escuro */
+body.dark-mode .navbar {
+  background-color: var(--dark-surface-color);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Logo no modo escuro - aplica filtro vermelho */
+body.dark-mode .logo-img {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(90%) saturate(6932%) hue-rotate(357deg) brightness(97%) contrast(114%);
+  transition: filter 0.3s ease;
+}
+
+/* Login Card no modo escuro */
+body.dark-mode .login-card {
+  background-color: var(--dark-surface-color);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .login-header h2 {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .terms-box {
+  background-color: var(--dark-input-bg);
+  border-color: var(--dark-border-color);
+  color: var(--dark-text-secondary);
+}
+
+/* Botões no modo escuro */
+body.dark-mode .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+body.dark-mode .btn-primary:hover, 
+body.dark-mode .btn-primary:focus {
+  background-color: #c01010;
+  border-color: #c01010;
+}
+
+/* Formulários no modo escuro */
+body.dark-mode .form-check-label {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .form-check-input {
+  background-color: var(--dark-input-bg);
+  border-color: var(--dark-border-color);
+}
+
+body.dark-mode .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Links no modo escuro */
+body.dark-mode a {
+  color: #ff6b6b;
+}
+
+body.dark-mode a:hover {
+  color: #ff8787;
+}
+
+body.dark-mode .support-info {
+  color: var(--dark-text-secondary);
+}
+
+/* Botão de alternância do modo escuro */
+.theme-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.3s;
+  color: #555;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .theme-toggle {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ícones do modo escuro/claro */
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.theme-toggle .sun-icon {
+  opacity: 0;
+  position: absolute;
+  transform: scale(0.7);
+}
+
+.theme-toggle .moon-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.dark-mode .theme-toggle .sun-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.dark-mode .theme-toggle .moon-icon {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+/* Ajustes para o footer no modo escuro */
+body.dark-mode .footer {
+  background-color: var(--primary-color);
+}
+
+/* Ajustes para mensagens autenticadas no modo escuro */
+body.dark-mode .alert-success {
+  background-color: #0f5132;
+  color: #d1e7dd;
+  border-color: #0a3622;
+}
+
+/* Transição suave ao alternar modos */
+body, .navbar, .login-card, .terms-box, .form-check-input, 
+.btn, a, .footer, .alert {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
