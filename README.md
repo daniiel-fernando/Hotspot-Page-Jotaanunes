@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/ebd2acb4-8c33-4950-94a8-94a2e1f42225)# Hotspot Page - Jotanunes
-
 Portal de autenticação personalizado para acesso à rede Wi-Fi da **Jotanunes Construtora**, utilizando o sistema de hotspot integrado ao firewall **Sophos XGS 2100**.
 
 ## 📸 Captura de Tela
